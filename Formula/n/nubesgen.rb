@@ -22,7 +22,6 @@ class Nubesgen < Formula
   end
 
   test do
-    s = pipe_output("#{bin}/nubesgen healthcheck")
-    assert_match "Azure CLI is installed", s
+    assert_match "Azure CLI is installed", shell_output("#{bin}/nubesgen healthcheck")
   end
 end
